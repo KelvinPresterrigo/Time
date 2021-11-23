@@ -1,0 +1,43 @@
+header{
+    color: blanchedalmond;
+}
+h1{
+    font-size: 75px;
+}
+body{
+    text-align: center;
+    background-color: rgb(29, 22, 22);
+
+    
+}
+section{
+    background-color: blanchedalmond;
+    border-radius: 24px 4px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgb(0, 0, 363);
+    text-align: center;
+}
+button{
+    height: 3em;
+    width: 6em;
+    border: none;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.start-btn{
+    background-color: green;
+}
+.pause-btn{
+    background-color: rgb(202, 5, 5);
+
+}
+.restart-btn{
+    background-color: rgb(7, 4, 212);
+
+}
