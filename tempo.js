@@ -4,6 +4,19 @@ var hora=00
 
 var interval
 
+function Watch() {
+    var data = new Date()
+    var horasRelogio = data.getHours()
+    var minutesRelogio = data.getMinutes()
+    var secRelogio = data.getSeconds()
+    
+    var tempoTotal = `${horasRelogio} : ${minutesRelogio} : ${secRelogio}`
+    var tempo = document.getElementById("div_relogio")
+    tempoTotal.innerHTML = tempo
+    setInterval(Watch, 500)
+} 
+
+
 function doisdigitos(digit){
     if(digit<10){
         return('0'+digit)
