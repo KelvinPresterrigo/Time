@@ -1,17 +1,21 @@
+
 const clockContainer = document.querySelector('.clock-Container')
 
 const updateClock = () => {
-    const present = new Date()
-    const horas = present.getHours()
-    const min = present.getMinutes()
-    const seg = present.getSeconds()
-
-    const clockHTML = 
-        `<span>${horas.length === 1 ? `0${horas}`: horas}</span> :
-        <span>${min.length === 1 ? `0${min}`: min}</span> :
-        <span>${seg.length === 1 ? `0${seg}`: seg}</span>`
-    
+    let present = new Date()
+    let horas = present.getHours()
+    let min = present.getMinutes()
+    let seg = present.getSeconds()
+    min = zero(min)
+    seg = zero(seg)
+    function zero(x){
+        
+        if(x < 10){
+            x = '0'+x
+        }return x
+    }
+   const clockHTML = `${horas} : ${min} : ${seg}`
    clockContainer.innerHTML = clockHTML
 }
 
-setInterval(updateClock, 1000)
+setInterval(updateClock, 1000) 

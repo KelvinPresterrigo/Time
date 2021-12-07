@@ -1,23 +1,7 @@
 var sec=00
 var min=00
 var hora=00
-
 var interval
-
-function Watch(interval) {
-    interval = setInterval ()
-    var data = new Date()
-    var horasRelogio = data.getHours()
-    var minutesRelogio = data.getMinutes()
-    var secRelogio = data.getSeconds()
-    
-    var tempoTotal = `${horasRelogio} : ${minutesRelogio} : ${secRelogio}`
-    var tempo = document.getElementById("div_relogio")
-    tempoTotal.innerText = tempo
-    
-} 
-setInterval(Watch, 500)
-
 function doisdigitos(digit){
     if(digit<10){
         return('0'+digit)
@@ -45,8 +29,6 @@ function reload (){
     //window.alert("tou´ve stopped at : "+document.getElementById('pulso').innerText)
     document.getElementById('pulso').innerText="00:00:00"
 }
-
-
 function pulso(){
      sec++
      if(sec==60){
@@ -58,6 +40,26 @@ function pulso(){
          }
 
      }
-     document.getElementById("pulso").innerText= doisdigitos(hora)+':'+ doisdigitos(min)+':'+ doisdigitos(sec)
+     document.getElementById("pulso").innerText= doisdigitos(hora)+':'+ doisdigitos(min)+':'+ doisdigitos(sec)}
+   
 
- }
+const clockContainer = document.querySelector("clock-Container")
+const updateClock = () => {
+    const present = new Date()
+    const horus = present.getHours()
+    const minu = present.getMinutes()
+    const seg = present.getSeconds()
+    
+
+    minu = zero(minu)
+    seg = zero(seg)
+    
+    function zero(x){
+        if(x<10){
+            x = '0'+x
+        }return x
+    }
+   const clockHTML = `${horus} : ${minu} : ${seg}`
+   clockContainer.innerHTML = clockHTML
+}
+setInterval(updateClock, 1000)
