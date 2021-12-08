@@ -1,6 +1,5 @@
 
 const clockContainer = document.querySelector('.clock-Container')
-
 const updateClock = () => {
     let present = new Date()
     let horas = present.getHours()
@@ -9,7 +8,6 @@ const updateClock = () => {
     min = zero(min)
     seg = zero(seg)
     function zero(x){
-        
         if(x < 10){
             x = '0'+x
         }return x
@@ -17,5 +15,4 @@ const updateClock = () => {
    const clockHTML = `${horas} : ${min} : ${seg}`
    clockContainer.innerHTML = clockHTML
 }
-
 setInterval(updateClock, 1000) 
