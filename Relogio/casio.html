@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Relogio</title>
     <link rel="stylesheet" href="estilo.css"
-</head>
-<body>
-  <div class="clock-Container"></div>
-  <form name="form_main">
+  </head>
+  <body>
+    <div class="clock-Container"></div>
     <div>
-      <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+      <span id="hour">00</span>:<span id="minute">00</span>:<span id="second"
+        >00</span
+      >:<span id="millisecond">000</span>
     </div>
-  
+    <form name="form_main">
+      <button type="button" name="start">start</button>
+      <button type="button" name="pause">pause</button>
+      <button type="button" name="reset">reset</button>
+    </form>
+    <script src="cronos.js"></script>
+    <script src="watchmen.js"></script>
     <br />
-    <button type="button" name="start">start</button>
-    <button type="button" name="pause">pause</button>
-    <button type="button" name="reset">reset</button>
-  </form>
-  <script src="cronos.js"></script>
-  <script src="watchmen.js"></script>
-  <br />
- 
-</body>
+  </body>
 </html>
